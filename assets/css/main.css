@@ -4004,7 +4004,7 @@ input, select, textarea {
 		background-color: rgba(29, 36, 42, 0.9);
 	}
 
-	body.is-mobile.landing #page-wrapper {
+	/* body.is-mobile.landing #page-wrapper {
 		background: none;
 	}
 
@@ -4017,7 +4017,7 @@ input, select, textarea {
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
+	} */
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
