@@ -67,6 +67,14 @@ body {
   object-fit: cover;
 }
 
+/* On small screens, use contain to avoid cropping/zoom */
+@media screen and (max-width: 736px) {
+  #bg-video {
+    object-fit: contain;
+    background: #2e3842; /* fallback background color */
+  }
+}
+
 mark {
 	background-color: transparent;
 	color: inherit;
