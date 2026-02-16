@@ -11,7 +11,100 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Container for the whole CTA area */
+			.hoa-cta {
+				margin-top: 1.25rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			/* PayPal button row */
+			.paypal-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				width: min(520px, 92vw);
+				padding: 1rem 1.15rem !important;
+				border-radius: 14px;
+			}
+
+			.paypal-icon {
+				height: 22px;
+			}
+
+			/* Divider line */
+			.hoa-divider {
+				width: min(700px, 92vw);
+				border: 0;
+				border-top: 3px solid rgba(255, 255, 255, 0.877);
+				margin: 0.25rem 0 0.1rem 0;
+			}
+
+			/* Subtitle */
+			.hoa-subtitle {
+				width: min(560px, 92vw);
+				text-align: center;
+				font-size: 0.95rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				opacity: 0.9;
+				margin: 0;
+				font-weight: 700;
+			}
+
+			/* Two buttons side-by-side (responsive) */
+			.hoa-docs {
+				width: min(560px, 92vw);
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0.85rem;
+			}
+
+			/* Make Spectral buttons not clip and look consistent */
+			.hoa-docs .button,
+			.paypal-btn.button {
+				height: auto !important;
+				line-height: 1.25 !important;
+				white-space: normal !important;
+				overflow: visible !important;
+				text-align: center;
+			}
+
+			/* Soft accent buttons */
+			.soft-btn {
+				background: rgba(255, 255, 255, 0.14);
+				border: 1px solid rgba(255, 255, 255, 0.28);
+				box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+				backdrop-filter: blur(6px);
+				-webkit-backdrop-filter: blur(6px);
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem 1.1rem !important;
+				border-radius: 14px;
+			}
+
+			.soft-btn:hover {
+				background: rgba(255, 255, 255, 0.22);
+				border-color: rgba(255, 255, 255, 0.38);
+				transform: translateY(-1px);
+			}
+
+			/* Mobile: stack the doc buttons */
+			@media (max-width: 520px) {
+				.hoa-docs {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
 	</head>
+
 	<body class="landing is-preload">
 		<video autoplay muted loop playsinline id="bg-video">
 			<source src="videos/lake_background.webm" type="video/webm">
@@ -38,14 +131,28 @@
 					<p>Note: This is for the Mooresville, NC, Ridgetop Community</p>
 					<p>Questions? Please contact ridgetopcommunity@gmail.com</p>
 
-					<ul class="actions special">
-						<li>
-							<a href="HoaDuesLinks.html" class="button primary" style="display:flex;align-items:center;justify-content:center;">
-								<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:24px; margin-right:8px;">
-								<span>Pay Dues</span>
+					<div class="hoa-cta">
+						<a href="HoaDuesLinks.html" class="button primary paypal-btn">
+							<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="paypal-icon">
+							<span>Pay Dues</span>
+						</a>
+
+						<hr class="hoa-divider" />
+
+						<p class="hoa-subtitle">Important Documents</p>
+
+						<div class="hoa-docs">
+							<a href="ArchitecturalGuidelines.html" class="button soft-btn">
+								Architectural Guidelines
 							</a>
-						</li>
-					</ul>
+
+							<a href="CCRs.html" class="button soft-btn">
+								Declaration of Covenants,<br />
+								Conditions, and Restrictions
+							</a>
+						</div>
+					</div>
+
 				</div>
 			</section>
 
