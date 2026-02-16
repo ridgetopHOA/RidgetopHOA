@@ -140,31 +140,20 @@
 				transform: translateY(-1px);
 			}
 
-/* Keep the same site font, just remove the styling that makes emails look off-center */
-#banner .hoa-email,
-#banner .hoa-email a {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-  text-decoration: none;
-  text-transform: uppercase;       /* matches other lines */
-  letter-spacing: 0.12em;          /* matches template-ish spacing */
-  text-align: center;
-}
+			/* Make the email look centered and not distorted by banner letter-spacing/uppercase */
+			#banner .hoa-email {
+			margin-top: -0.6rem;     /* pulls it closer to the line above (optional) */
+			text-transform: none !important;
+			letter-spacing: normal !important;
+			}
 
-
-/* Help wrapping on small screens without shifting */
-#banner .hoa-email {
-  text-align: center;
-  margin-top: -0.6rem;             /* optional */
-}
-
-#banner .hoa-email a {
-  display: inline;                 /* match normal paragraph text */
-  word-break: break-word;
-}
-
+			#banner .hoa-email a {
+			text-transform: none !important;
+			letter-spacing: normal !important;
+			display: inline-block;
+			text-align: center;
+			word-break: break-word;     /* prevents odd overflow on small widths */
+			}
 
 			/* Mobile: stack the doc buttons */
 			@media (max-width: 520px) {
