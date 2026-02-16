@@ -140,11 +140,39 @@
 				transform: translateY(-1px);
 			}
 
+/* Keep the same site font, just remove the styling that makes emails look off-center */
+#banner .hoa-email,
+#banner .hoa-email a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;       /* matches other lines */
+  letter-spacing: 0.12em;          /* matches template-ish spacing */
+  text-align: center;
+}
+
+
+/* Help wrapping on small screens without shifting */
+#banner .hoa-email {
+  text-align: center;
+  margin-top: -0.6rem;             /* optional */
+}
+
+#banner .hoa-email a {
+  display: inline;                 /* match normal paragraph text */
+  word-break: break-word;
+}
+
+
 			/* Mobile: stack the doc buttons */
 			@media (max-width: 520px) {
 				.hoa-docs {
 					grid-template-columns: 1fr;
 				}
+
+			
 			}
 		</style>
 	</head>
@@ -169,7 +197,10 @@
 					<h2>Ridgetop Homeowners Association</h2>
 					<p>Pay your HOA Dues below through PayPal</p>
 					<p>Note: This is for the Mooresville, NC, Ridgetop Community</p>
-					<p>Questions? Please contact ridgetopcommunity@gmail.com</p>
+					<p>Questions? Please contact</p>
+					<p class="hoa-email">
+					<a href="mailto:ridgetopcommunity@gmail.com">ridgetopcommunity@gmail.com</a>
+					</p>
 
 					<div class="hoa-cta">
 						<a href="HoaDuesLinks.html" class="button primary paypal-btn">
